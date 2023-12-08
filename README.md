@@ -5,7 +5,7 @@ Data for the verification of proofs of the paper *Algebraic and symplectic curve
 - `CheckCurveInvolution`. Check the singularity types for the curve computed in the previous file.
 - `OcticAuto3`. Computation of the curves invariant by an automorphism of order 3.There are several auxiliary files in `files3`.
 - `CheckCurveAuto3`. Check the singularity types for the curve computed in the previous file.
-- `FundametalGroupInvolution` and `Alternatives2`. Computations of the fundamental group of the complement of the curves invariant by an involution.
-- `FundametalGroupAuto3` and `Alternatives3`. Computations of the fundamental group of the complement of the curves invariant by automorphism of order 3.
+- `FundametalGroupInvolution` and `Alternative2`. Computations of the fundamental group of the complement of the curves invariant by an involution.
+- `FundametalGroupAuto3` and `Alternative3`. Computations of the fundamental group of the complement of the curves invariant by automorphism of order 3.
 
   There is also a folder `functions` with auxiliary functions.
