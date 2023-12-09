@@ -2,7 +2,7 @@
 Data for the verification of proofs of the paper *Algebraic and symplectic curves of degree 8*. It contains the following files:
 - `ConstructionSymplecticGroup`.
 - `OcticInvolution`. Computation of the curves invariant by an involution. There are several auxiliary files in `files2`.
-- `CheckCurveInvolution`. Check the singularity types for the curve computed in the previous file.
+- `CheckCurveInvolution`. Check the singularity types for the curve computed in the previous file. See [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/enriqueartal/SymplecticOctics/main?labpath=CheckCurveInvolution.ipynb)
 - `OcticAuto3`. Computation of the curves invariant by an automorphism of order 3.There are several auxiliary files in `files3`.
 - `CheckCurveAuto3`. Check the singularity types for the curve computed in the previous file.
 - `FundametalGroupInvolution` and `Alternative2`. Computations of the fundamental group of the complement of the curves invariant by an involution.
