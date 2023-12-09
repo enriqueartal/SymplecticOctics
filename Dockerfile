@@ -15,11 +15,11 @@ RUN adduser --disabled-password --gecos "Default user" --uid ${NB_UID} ${NB_USER
 
 # Make sure the contents are in ${HOME}
 COPY *.ipynb ${HOME}/
-RUN mkdir -p $(HOME)/files2
+RUN mkdir -p ${HOME}/files2
 COPY files2/* ${HOME}/files2/
-RUN mkdir -p $(HOME)/files3
+RUN mkdir -p ${HOME}/files3
 COPY files3/* ${HOME}/files3/
-RUN mkdir -p $(HOME)/functions
+RUN mkdir -p ${HOME}/functions
 COPY functions/* ${HOME}/functions/
 RUN chown -R ${NB_USER}:${NB_USER} ${HOME}
 
