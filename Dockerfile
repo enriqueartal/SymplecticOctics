@@ -28,7 +28,7 @@ ENV HOME /home/${NB_USER}
 RUN adduser --disabled-password --gecos "Default user" --uid ${NB_UID} ${NB_USER}
 
 # Prepare for building Sage
-ENV PR_REPO https://github.com/REPO_NAME
+ENV PR_REPO https://github.com/sagemath/sage
 ENV PR_BRANCH BRANCH_NAME
 ENV BINDER_BRANCH sagemath-environment
 RUN apt-get install -y git
