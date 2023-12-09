@@ -13,10 +13,10 @@ ENV NB_UID 1000
 ENV HOME /home/${NB_USER}
 RUN adduser --disabled-password --gecos "Default user" --uid ${NB_UID} ${NB_USER}
 
-# Make sure the contents of the notebooks directory are in ${HOME}
+# Make sure the contents are in ${HOME}
 COPY CheckCurveInvolution.ipynb ${HOME}/
 RUN mkdir -p $(HOME)/files2
-COPY files2/* ${HOME}/files2
+COPY files2/* ${HOME}/files2/
 RUN chown -R ${NB_USER}:${NB_USER} ${HOME}
 
 # Install Sage package
