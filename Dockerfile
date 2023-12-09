@@ -1,7 +1,7 @@
 # Dockerfile for binder
 # Reference: https://mybinder.readthedocs.io/en/latest/tutorials/dockerfile.html
 
-FROM ghcr.io/sagemath/sage-binder-env:10.2
+FROM ghcr.io/sagemath/sage-binder-env:10.3.beta0
 
 USER root
 
@@ -24,7 +24,7 @@ COPY functions/* ${HOME}/functions/
 RUN chown -R ${NB_USER}:${NB_USER} ${HOME}
 
 # Install Sage package
-# RUN /sage/sage -i sirocco
+RUN /sage/sage -i sirocco
 
 # Switch to the user
 USER ${NB_USER}
