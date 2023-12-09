@@ -12,7 +12,6 @@ dependencies:
   # distribution of SageMath, without plotting, without symbolic computations, ….
   - sirocco
   - sagemath-sirocco
-  - sagelib
   # If you chose sagelib instead of sage above, you can add the required
   # features manually here, e.g., matplotlib-base for basic plotting, sympy for
   # symbolic computations, …. See the "run" section of
