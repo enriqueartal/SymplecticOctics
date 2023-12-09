@@ -24,7 +24,7 @@ COPY functions/* ${HOME}/functions/
 RUN chown -R ${NB_USER}:${NB_USER} ${HOME}
 
 # Install Sage package
-RUN /sage/sage -i sirocco
+# RUN /sage/sage -i sirocco
 
 # Switch to the user
 USER ${NB_USER}
