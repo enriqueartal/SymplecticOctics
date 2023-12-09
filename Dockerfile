@@ -1,16 +1,16 @@
 # Dockerfile for binder
 # Reference: https://mybinder.readthedocs.io/en/latest/tutorials/dockerfile.html
 
-FROM ghcr.io/sagemath/sage-binder-env:10.2.rc5
-# FROM sagemath/sagemath:latest
+# FROM ghcr.io/sagemath/sage-binder-env:10.2.rc5
+FROM sagemath/sagemath:latest
 
 USER root
 
-# Create user alice with uid 1000
+# Create user alice with uid 1001
 ARG NB_USER=alice
-ARG NB_UID=1000
+ARG NB_UID=1001
 ENV NB_USER alice
-ENV NB_UID 1000
+ENV NB_UID 1001
 ENV HOME /home/${NB_USER}
 RUN adduser --disabled-password --gecos "Default user" --uid ${NB_UID} ${NB_USER}
 
@@ -25,7 +25,7 @@ COPY functions/* ${HOME}/functions/
 RUN chown -R ${NB_USER}:${NB_USER} ${HOME}
 
 # Install Sage package
-# RUN /sage/sage -i sirocco
+RUN /sage/sage -i sirocco
 
 # Switch to the user
 USER ${NB_USER}
