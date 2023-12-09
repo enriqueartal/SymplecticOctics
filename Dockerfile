@@ -25,7 +25,7 @@ COPY functions/* ${HOME}/functions/
 RUN chown -R ${NB_USER}:${NB_USER} ${HOME}
 
 # Install Sage package
-RUN sage -i sirocco
+# RUN sage -i sirocco
 
 # Install Sage kernel to Jupyter
 RUN mkdir -p $(jupyter --data-dir)/kernels
