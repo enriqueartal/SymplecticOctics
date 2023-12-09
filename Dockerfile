@@ -6,6 +6,14 @@ FROM sagemath/sagemath:latest
 
 USER root
 
+# Create user alice with uid 1001
+ARG NB_USER=alice
+ARG NB_UID=1001
+ENV NB_USER alice
+ENV NB_UID 1001
+ENV HOME /home/${NB_USER}
+RUN adduser --disabled-password --gecos "Default user" --uid ${NB_UID} ${NB_USER}
+
 # Make sure the contents are in ${HOME}
 COPY *.ipynb ${HOME}/
 RUN mkdir -p ${HOME}/files2
@@ -19,12 +27,12 @@ RUN chown -R ${NB_USER}:${NB_USER} ${HOME}
 # Install Sage package
 # RUN /sage/sage -i sirocco
 
-# Switch to the user
-USER ${NB_USER}
-
 # Install Sage kernel to Jupyter
 RUN mkdir -p $(jupyter --data-dir)/kernels
 RUN ln -s /sage/venv/share/jupyter/kernels/sagemath $(jupyter --data-dir)/kernels
+
+# Switch to the user
+USER ${NB_USER}
 
 # Start in the home directory of the user
 WORKDIR /home/${NB_USER}
