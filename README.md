@@ -10,4 +10,4 @@ Data for the verification of proofs of the paper *Algebraic and symplectic curve
 
   There is also a folder `functions` with auxiliary functions.
 
-  Run [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/enriqueartal/SymplecticOctics/main?labpath=,) to execute the notebooks (`Alternative2` and `Alternative3` need tools not yet included in this version of `Sagemath`).
+  Run [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/enriqueartal/SymplecticOctics/main?labpath=.) to execute the notebooks (`Alternative2` and `Alternative3` need tools not yet included in this version of `Sagemath`).
