@@ -10,8 +10,8 @@ dependencies:
   # Install the full distribution of SageMath. The resulting image might take a
   # long time to load on binder. Replace sage with sagelib, to use a minimal
   # distribution of SageMath, without plotting, without symbolic computations, ….
-  # - sagemath-sirocco
-  - sagelib
+  - sagemath-sirocco
+  # - sagelib
   - sirocco
   - matplotlib-base
   # If you chose sagelib instead of sage above, you can add the required
