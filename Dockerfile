@@ -2,7 +2,7 @@
 # Reference: https://mybinder.readthedocs.io/en/latest/tutorials/dockerfile.html
 
 # Pull the Sage docker image
-FROM ghcr.io/sagemath/sage/sage-ubuntu-focal-standard-with-targets:dev
+FROM ghcr.io/sagemath/sage/sage-ubuntu-focal-standard-with-targets:latest
 
 USER root
 
