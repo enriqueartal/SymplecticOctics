@@ -1,8 +1,8 @@
 # Dockerfile for binder
 # Reference: https://mybinder.readthedocs.io/en/latest/tutorials/dockerfile.html
 
-# FROM ghcr.io/sagemath/sage-binder-env:10.2.rc5
-FROM sagemath/sagemath:latest
+FROM ghcr.io/sagemath/sage-binder-env:10.5
+# FROM sagemath/sagemath:latest
 
 USER root
 
@@ -25,7 +25,8 @@ COPY functions/* ${HOME}/functions/
 RUN chown -R ${NB_USER}:${NB_USER} ${HOME}
 
 # Install Sage package
-# RUN sage -i sirocco
+RUN sage -i sirocco
+RUN sage -b
 
 # Install Sage kernel to Jupyter
 RUN mkdir -p $(jupyter --data-dir)/kernels
